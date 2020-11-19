@@ -1,0 +1,26 @@
+body {
+    width: 500px;
+}
+
+form {
+    padding-top: 20px;
+    padding-left: 20px;
+    border-style: groove;
+    background-color: lightblue;
+}
+
+label {
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    word-break: break-all;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 20px;
+}

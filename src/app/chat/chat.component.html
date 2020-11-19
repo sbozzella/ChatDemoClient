@@ -1,0 +1,37 @@
+<body>
+    <h1>Una semplice chat demo:</h1>
+    <form>
+        <label for="inputName">Nome e cognome: </label>
+        <input type="text" id="inputName" [(ngModel)]="message.name" name="identity"><br><br>
+        <label for="message">Scrivi il messaggio da inviare:</label><br><br>
+        <textarea id="message" rows="6" cols="60" [(ngModel)]="message.text" name="text"></textarea><br><br>
+        <input type="button" id="inputName" (click)="sendMessage()" value="Invia"><br><br>
+        <p>Clicca "Invia" per inviare il messaggio:</p>
+    </form>
+
+    <table>
+        <colgroup>
+            <col style="width: 30%;">
+            <col style="width: 40%;">
+            <col style="width: 30%;">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>Nome e cognome</th>
+                <th>Messaggio</th>
+                <th>Creato</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let message of messages">
+                <td>{{message.name}}</td>
+                <td>{{message.text}}</td>
+                <td>{{message.createdAt | date:'dd-MMM-y, hh:mm'}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
